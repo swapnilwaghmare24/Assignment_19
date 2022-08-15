@@ -73,5 +73,22 @@ public class UserValidation {
         }
     }
 
+    void password()
+    {
+        String password;
+        System.out.println("enter password");
+        password=sc.next();
+        Pattern pattern=Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&])[a-zA-Z0-9@#$%^&+=]{8,}$");
+        Matcher matcher=pattern.matcher(password);
+        if(matcher.matches())
+        {
+            System.out.println("Password is valid");
+        }
+        else
+        {
+            System.out.println("Password is not valid");
+        }
+    }
+
 
 }

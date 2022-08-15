@@ -36,13 +36,23 @@ public class UserValidationRunner {
             } else {
                 return;
             }
-        }*/
+        }
         userValidation.mobileNumber();
         while (ch=='y') {
             System.out.println("type y to check again");
             ch = sc.next().charAt(0);
             if (ch == 'y') {
                 userValidation.mobileNumber();
+            } else {
+                return;
+            }
+        }*/
+        userValidation.password();
+        while (ch=='y') {
+            System.out.println("type y to check again");
+            ch = sc.next().charAt(0);
+            if (ch == 'y') {
+                userValidation.password();
             } else {
                 return;
             }
