@@ -56,6 +56,22 @@ public class UserValidation {
             System.out.println("Email is not valid");
         }
     }
+    void mobileNumber()
+    {
+        String mobileNumber;
+        System.out.println("enter mobile number");
+        mobileNumber=sc.next();
+        Pattern pattern=Pattern.compile("^[9]{1}[1]{1}-[0-9]{10}$");
+        Matcher matcher=pattern.matcher(mobileNumber);
+        if(matcher.matches())
+        {
+            System.out.println("Mobile number is valid");
+        }
+        else
+        {
+            System.out.println("Mobile number is not valid");
+        }
+    }
 
 
 }
