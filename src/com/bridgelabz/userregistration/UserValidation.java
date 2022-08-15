@@ -40,5 +40,22 @@ public class UserValidation {
         }
     }
 
+    void email()
+    {
+        String email;
+        System.out.println("Enter email");
+        email=sc.next();
+        Pattern pattern=Pattern.compile("^[a-z]+[.]?[a-z]*@[a-z]+.[a-z]+[.a-z]*$");
+        Matcher matcher=pattern.matcher(email);
+        if(matcher.matches())
+        {
+            System.out.println("Email is valid");
+        }
+        else
+        {
+            System.out.println("Email is not valid");
+        }
+    }
+
 
 }
