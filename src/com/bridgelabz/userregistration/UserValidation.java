@@ -24,5 +24,21 @@ public class UserValidation {
 
     }
 
+    void lastName()
+    {
+        String lastName;
+        System.out.println("Enter last name");
+        lastName=sc.next();
+        Pattern pattern=Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+        Matcher matcher=pattern.matcher(lastName);
+        if(matcher.matches())
+        {
+            System.out.println("Last name is valid");
+        }
+        else {
+            System.out.println("Last name is not valid");
+        }
+    }
+
 
 }
